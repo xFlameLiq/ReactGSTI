@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import '../styles/Register.css';
+import iconRes from '../images/logo_restaurant.png';
 
 const Register = () => {
 
@@ -57,7 +58,7 @@ const Register = () => {
           <Link to='/login'>¿Do you already have an account? Login</Link>
         </div>
       </form>
-      <img src="./images/logo_restaurant.png"/>
+      <img src={iconRes}/>
     </div>
   );
 }
