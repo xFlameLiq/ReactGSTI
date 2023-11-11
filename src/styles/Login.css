@@ -87,3 +87,9 @@ width: 30rem;
   font-family: 'Segoe UI', sans-serif;
   margin: 0px auto 0px;
 }
+
+.error {
+  color: red;
+  width: 35rem;
+  margin: 1rem auto 1rem;
+}

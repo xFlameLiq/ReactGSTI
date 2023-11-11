@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import '../styles/Register.css';
 
-export default function Registrarme() {
+const Register = () => {
 
   const [name, setName] = useState('');
   const [lastname, setLastname] = useState('');
@@ -61,3 +61,5 @@ export default function Registrarme() {
     </div>
   );
 }
+
+export default Register;
