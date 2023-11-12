@@ -9,8 +9,8 @@ font-size: 30px;
 }
 
 .sesion-img {
-  width: 85px;
-  height: 85px;
+  width: 75px;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +29,8 @@ font-size: 30px;
   margin: 50px auto;
 }
 .form {
-  background-color: #ffffff;
+  background-color: #448a48;
+  font-family: sans-serif;
   
 }
 
@@ -79,17 +80,18 @@ width: 500px;
 }
 .a {
 text-align: center;
-width: 30rem;
+width: 32rem;
   display: block;
   text-decoration: none;
   color: rgb(21, 102, 45);
   font-size: small;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'sans-serif';
   margin: 0px auto 0px;
 }
 
 .error {
-  color: red;
+  color: rgb(110, 9, 9);
   width: 35rem;
   margin: 1rem auto 1rem;
+  font-family: 'sans-serif';
 }

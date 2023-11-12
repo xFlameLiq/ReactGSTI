@@ -53,7 +53,7 @@ const Register = () => {
         <input type="text" required email="" id="" value={email} onChange={handleEmail}/>
         <label>Password:</label>
         <input type="password" required password="" id="" value={password} onChange={handlePassword}/>
-        <input type="submit" value="Registrarme"  />
+        <input type="submit" value="Register"  />
         <div>
           <Link to='/login'>¿Do you already have an account? Login</Link>
         </div>
