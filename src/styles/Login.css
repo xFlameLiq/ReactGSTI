@@ -1,5 +1,5 @@
 body{
-  background: linear-gradient(90deg ,  #baf3c3 , #35964d , #baf3c3);
+  background: linear-gradient(90deg ,  #baf3c3 , #6fb180 , #baf3c3);
 }
 
 .title {
@@ -9,15 +9,15 @@ font-size: 30px;
 }
 
 .sesion-img {
-  width: 75px;
-  height: 75px;
+  width: 95px;
+  height: 95px;
   display: flex;
   justify-content: center;
   align-items: center;
   position:relative;
   margin: 0px auto -30px;
   border-radius: 50%;
-  background-image: url(../../images/logo_restaurant.png);
+  background-image: url(../images/logo_restaurant.png);
   background-size: cover;
   top: -60px;
 }
@@ -36,9 +36,10 @@ font-size: 30px;
 
 
 .container-main .form {
-  border: 1px solid rgb(185, 180, 180);
+  border: 1px solid rgb(240, 232, 232);
   border-radius: 14px;
   padding: 20px;
+  color: #ffffff;
 }
 .container-main .form label {
   padding: 10px 10px;
@@ -84,7 +85,8 @@ width: 32rem;
   display: block;
   text-decoration: none;
   color: rgb(21, 102, 45);
-  font-size: small;
+  font-size:medium;
+  font-style:oblique;
   font-family: 'sans-serif';
   margin: 0px auto 0px;
 }

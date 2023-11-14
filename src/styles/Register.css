@@ -3,9 +3,9 @@ body{
   }
   
   h1 {
-    text-align: center;
-    margin: 1em 1em;
-    font-size: 25px;
+    text-align:center;
+    margin-inline-start: 1em ;
+    font-size: 20px;
     color:#2b422d;
     font-family:sans-serif;
   }
@@ -17,7 +17,7 @@ body{
   }
   
   form {
-    background: linear-gradient(90deg , #fbffff, #e7e5c3, #fbffff );
+    background: linear-gradient(90deg , #fbffff, #e9e8d6, #fbffff );
   }
   
   .container form {
@@ -74,13 +74,18 @@ body{
   }
   
   a {
-    text-decoration: none;
-    color: rgb(21, 102, 45);
-    font-size: small;
-    font-family: 'sans-serif';
+  text-align: center;
+  width: 32rem;
+  display: block;
+  text-decoration: none;
+  color: rgb(21, 102, 45);
+  font-size:medium;
+  font-style:oblique;
+  font-family: 'sans-serif';
+  margin: 0px auto 0px;
   }
   
   img {
-    transform: translateX(168%) translateY(30%);
-    width: 400px;
+    transform: translateX(55%) translateY(-135%);
+    width: 370px;
   }
