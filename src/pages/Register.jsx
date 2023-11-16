@@ -55,7 +55,7 @@ const Register = () => {
         <input type="password" required password="" id="" value={password} onChange={handlePassword}/>
         <input type="submit" value="Register"  />
         <div>
-          <Link className="a" to='/login'>¿Do you already have an account? Login</Link>
+          <Link className="a" to='/Login'>¿Do you already have an account? Login</Link>
         </div>
       </form>
       <img src={iconRes}/>

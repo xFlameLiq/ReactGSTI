@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import '../styles/Login.css';
 
+
 const Login = () => {
+
+  const navigate = useNavigate();
+
   const [username, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
@@ -40,7 +44,7 @@ const Login = () => {
 
       if(data.code === "SUCCESS_AUTH") {
         setMsgAuthSucc(true);
-        location.href = "/UserHome";
+        navigate("/UserHome");
         return
       }
 
@@ -77,6 +81,7 @@ const Login = () => {
         <Link className="a" to="/Register">
           ¿Don't have an account? Register
         </Link>
+ 
       </form>
     </div>
   );
