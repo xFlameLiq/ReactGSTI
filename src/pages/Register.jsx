@@ -14,7 +14,7 @@ const Register = () => {
 
   function onSubmitRegister(evt) {
     evt.preventDefault();
-    fetch('https://backend-8ts0.onrender.com/Register/admins', {
+    fetch('https://backend-8ts0.onrender.com/admins', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json;charset=UTF-8'
