@@ -8,6 +8,7 @@ const Login = () => {
   const [errors, setErrors] = useState({});
   const [msgValError, setMsgValError] = useState(false);
   const [msgAuthError, setMsgAuthError] = useState(false);
+  const [msgAuthSucc, setMsgAuthSucc] = useState(false);
 
   function onSubmintLogin(evt) {
     evt.preventDefault();
@@ -36,6 +37,13 @@ const Login = () => {
         setMsgValError(false);
         return console.log("CONTRASEÑA O USUARIO NO ENCONTRADO")
     }
+
+      if(data.code === "SUCCESS_AUTH") {
+        setMsgAuthSucc(true);
+        location.href = "UserHome";
+        return
+      }
+
   })
     .catch((err) => console.log(err))
   }
@@ -64,6 +72,7 @@ const Login = () => {
         </div>
         {msgValError ? <p className="error">ES NECESARIO EL CAMPO USUARIO Y/O CONTRASEÑA (SE REQUIERE UNA CONTRASEÑA DE AL MENOS 8 DE LONGITUD)</p> : null}
         {msgAuthError ? <p className="error">ERROR, USUARIO NO ENCONTRADO</p> : null}
+        {msgAuthSucc ? <p className="error">USUARIO ENCONTRADO, REDIRIGIENDO...</p> : null}
         <input className="input" type="submit" value="Enter" />
         <Link className="a" to="/Register">
           ¿Don't have an account? Register
