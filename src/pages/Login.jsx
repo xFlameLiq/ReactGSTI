@@ -14,7 +14,7 @@ const Login = () => {
   const [msgAuthError, setMsgAuthError] = useState(false);
   const [msgAuthSucc, setMsgAuthSucc] = useState(false);
 
-  function onSubmintLogin(evt) {
+  function onSubmitLogin(evt) {
     evt.preventDefault();
     fetch('https://backend-8ts0.onrender.com/login', {
       method: 'POST',
@@ -63,7 +63,7 @@ const Login = () => {
 
   return (
     <div className="container-main">
-      <form className="form" id="form" onSubmit={onSubmintLogin}>
+      <form className="form" id="form" onSubmit={onSubmitLogin}>
         <div className="sesion-img"></div>
         <h1 className="title">Welcome</h1>
         <div className="data">
