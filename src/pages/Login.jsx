@@ -40,7 +40,7 @@ const Login = () => {
 
       if(data.code === "SUCCESS_AUTH") {
         setMsgAuthSucc(true);
-        location.href = "UserHome";
+        location.href = "/UserHome";
         return
       }
 
