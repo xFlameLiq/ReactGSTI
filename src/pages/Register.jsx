@@ -29,8 +29,8 @@ const Register = () => {
       }),
 
     }).then(res => res.json())
-    .then(data => {
-      return console.log(data)
+      .then(data => {
+      console.log(data)
   })
     .catch((err) => console.log(err))
   }
