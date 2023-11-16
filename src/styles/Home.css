@@ -1,0 +1,15 @@
+.links {
+        text-align: center;
+        width: 32rem;
+        display: block;
+        text-decoration: none;
+        color: rgb(21, 102, 45);
+        font-size: 3rem;
+        font-style:oblique;
+        font-family: 'sans-serif';
+        margin: 0px auto 0px; 
+}
+
+.links:hover {
+    color: red;
+}
