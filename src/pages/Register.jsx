@@ -9,9 +9,31 @@ const Register = () => {
   const [lastname, setLastname] = useState('');
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  function onSubmitRegister(evt) {
+    evt.preventDefault();
+    fetch('https://backend-8ts0.onrender.com/admins', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json;charset=UTF-8'
+      },
+      body: JSON.stringify({
+        name,
+        lastname,
+        address,
+        phone,
+        username,
+        password,
+      }),
+
+    }).then(res => res.json())
+      .then(data => {
+      console.log(data)
+  })
+    .catch((err) => console.log(err))
+  }
 
   function handleName(evt) {
     setName(evt.target.value);
@@ -29,8 +51,8 @@ const Register = () => {
     setPhone(evt.target.value);
   }
 
-  function handleEmail(evt) {
-    setEmail(evt.target.value);
+  function handleUsername(evt) {
+    setUsername(evt.target.value);
   }
   
   function handlePassword(evt) {
@@ -39,7 +61,7 @@ const Register = () => {
 
   return (
     <div className="container">
-      <form id="form" >
+      <form id="form" onSubmit={onSubmitRegister}>
         <h1>Create an account</h1>
         <label>Name:</label>
         <input type="text" required name="" id="" value={name} onChange={handleName} />
@@ -50,12 +72,12 @@ const Register = () => {
         <label>Phone:</label>
         <input type="text" required phone="" id="" value={phone} onChange={handlePhone}/>
         <label>Email:</label>
-        <input type="text" required email="" id="" value={email} onChange={handleEmail}/>
+        <input type="text" required email="" id="" value={username} onChange={handleUsername}/>
         <label>Password:</label>
         <input type="password" required password="" id="" value={password} onChange={handlePassword}/>
         <input type="submit" value="Register"  />
         <div>
-          <Link className="a" to='/login'>¿Do you already have an account? Login</Link>
+          <Link className="a" to='/Login'>¿Do you already have an account? Login</Link>
         </div>
       </form>
       <img src={iconRes}/>

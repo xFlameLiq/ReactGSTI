@@ -1,15 +1,20 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import '../styles/Login.css';
 
+
 const Login = () => {
+
+  const navigate = useNavigate();
+
   const [username, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
   const [msgValError, setMsgValError] = useState(false);
   const [msgAuthError, setMsgAuthError] = useState(false);
+  const [msgAuthSucc, setMsgAuthSucc] = useState(false);
 
-  function onSubmintLogin(evt) {
+  function onSubmitLogin(evt) {
     evt.preventDefault();
     fetch('https://backend-8ts0.onrender.com/login', {
       method: 'POST',
@@ -36,6 +41,13 @@ const Login = () => {
         setMsgValError(false);
         return console.log("CONTRASEÑA O USUARIO NO ENCONTRADO")
     }
+
+      if(data.code === "SUCCESS_AUTH") {
+        setMsgAuthSucc(true);
+        navigate("/UserHome");
+        return
+      }
+
   })
     .catch((err) => console.log(err))
   }
@@ -51,7 +63,7 @@ const Login = () => {
 
   return (
     <div className="container-main">
-      <form className="form" id="form" onSubmit={onSubmintLogin}>
+      <form className="form" id="form" onSubmit={onSubmitLogin}>
         <div className="sesion-img"></div>
         <h1 className="title">Welcome</h1>
         <div className="data">
@@ -64,10 +76,12 @@ const Login = () => {
         </div>
         {msgValError ? <p className="error">ES NECESARIO EL CAMPO USUARIO Y/O CONTRASEÑA (SE REQUIERE UNA CONTRASEÑA DE AL MENOS 8 DE LONGITUD)</p> : null}
         {msgAuthError ? <p className="error">ERROR, USUARIO NO ENCONTRADO</p> : null}
+        {msgAuthSucc ? <p className="error">USUARIO ENCONTRADO, REDIRIGIENDO...</p> : null}
         <input className="input" type="submit" value="Enter" />
         <Link className="a" to="/Register">
           ¿Don't have an account? Register
         </Link>
+ 
       </form>
     </div>
   );
