@@ -1,12 +1,31 @@
+import React from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import restaurant from '../images/logo_restaurant.png';
+import restaurant2 from '../images/restaurant.png';
+import restaurant3 from '../images/restaurant3.png';
+import '../styles/UserHome.css';
+
 
 
 const UserHome = () => {
 
-    return(
-        <>
-            <h1>BIENVENIDO!!!</h1>
-        </>
-    );
+ return(
+    <>
+      <h1>BIENVENIDO!!!</h1>
+      <Carousel autoPlay interval={3000} infiniteLoop>
+        <div>
+          <img src={restaurant} alt="Imagen 1" />
+        </div>
+        <div>
+          <img src={restaurant2}alt="Imagen 2" />
+        </div>
+        <div>
+          <img src={restaurant3} alt="Imagen 3" />
+        </div>
+      </Carousel>
+    </>
+ );
 }
 
 export default UserHome;

@@ -12,10 +12,7 @@ const Home = () => {
       <br />
       <Link to='/login' className='login-btn'>Login</Link>
     <Footer />
-      <h1>Home</h1>
-      <Link className="links" to='/Register'>Register</Link>
-      <br />
-      <Link className="links" to='/Login'>Login</Link>
+    
     </div>
 
   );
