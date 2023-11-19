@@ -72,7 +72,7 @@ body{
     flex-direction: column;
   }
   
-<<<<<<< HEAD
+  
   .a {
   text-align: center;
   width: 32rem;
@@ -84,8 +84,7 @@ body{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0px auto 0px;
   }
-=======
->>>>>>> 1eaff231892d5c4e4df7ff45647ffd64a444cf6c
+
   
   .a:hover {
     text-align: center;

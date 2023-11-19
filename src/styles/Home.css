@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 h1 {
     text-align:center;
@@ -38,7 +38,7 @@ display:inline-block;
  color: rgb(255, 255, 255);
 }
 
-=======
+
 .links {
         text-align: center;
         width: 32rem;
@@ -54,4 +54,4 @@ display:inline-block;
 .links:hover {
     color: red;
 }
->>>>>>> 1eaff231892d5c4e4df7ff45647ffd64a444cf6c
+
