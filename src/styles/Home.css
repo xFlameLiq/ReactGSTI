@@ -34,6 +34,6 @@ display:inline-block;
 .register-btn:hover,
 .login-btn:hover {
  background-color: #2a683a;
- color: white;
+ color: rgb(255, 255, 255);
 }
 

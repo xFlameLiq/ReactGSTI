@@ -13,7 +13,7 @@ const Footer = () => {
             <div class="footer-content">
                 <div class="footer-nav">
                     <ul>
-                        <li>Resources</li>
+                        <li>Resources:</li>
                     </ul>
                 </div>
                 <div class="footer-icons">
