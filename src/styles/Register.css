@@ -98,7 +98,7 @@ body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0px auto 0px;
     }
-  img {
+  .img {
     transform: translateX(55%) translateY(-135%);
     width: 370px;
   }

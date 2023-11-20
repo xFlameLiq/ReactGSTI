@@ -8,9 +8,9 @@ const Home = () => {
     <div>
       <h1>BORCELLE</h1>
       <h2>Italian restaurant</h2>
-      <Link to='/register' className='register-btn'>Register</Link>
+      <Link to='/Register' className='register-btn'>Register</Link>
       <br />
-      <Link to='/login' className='login-btn'>Login</Link>
+      <Link to='/Login' className='login-btn'>Login</Link>
     <Footer />
     
     </div>

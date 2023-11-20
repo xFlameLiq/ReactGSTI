@@ -1,9 +1,9 @@
 import React from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import restaurant from '../images/logo_restaurant.png';
-import restaurant2 from '../images/restaurant.png';
+import restaurant from '../images/restaurant.png';
+import restaurant2 from '../images/restaurant2.png';
 import restaurant3 from '../images/restaurant3.png';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import '../styles/UserHome.css';
 
 

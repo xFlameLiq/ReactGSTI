@@ -80,7 +80,7 @@ const Register = () => {
           <Link className="a" to='/Login'>¿Do you already have an account? Login</Link>
         </div>
       </form>
-      <img src={iconRes}/>
+      <img className='img' src={iconRes}/>
     </div>
   );
 }
