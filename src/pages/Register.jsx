@@ -11,6 +11,8 @@ const Register = () => {
   const [phone, setPhone] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [msgRegErr, setMsgRegErr] = useState(false);
+  const [msgRegSucc, setMsgRegSucc] = useState(false);
 
   function onSubmitRegister(evt) {
     evt.preventDefault();
@@ -30,7 +32,21 @@ const Register = () => {
 
     }).then(res => res.json())
       .then(data => {
-      console.log(data)
+      console.log(data);
+      
+      if(data.code === "201") {
+        setMsgRegSucc(true);
+        setMsgRegErr(false);
+
+
+      }
+
+      if(data.code === "400") {
+        setMsgRegErr(true);
+        setMsgRegSucc(false);
+
+      }
+
   })
     .catch((err) => console.log(err))
   }
@@ -76,6 +92,8 @@ const Register = () => {
         <label>Password:</label>
         <input type="password" required password="" id="" value={password} onChange={handlePassword}/>
         <input type="submit" value="Register"  />
+        {msgRegErr ? <p className="error">NO ES POSIBLE REGISTRAR AL USUARIO, COMPRUEBE LOS DATOS</p> : null}
+        {msgRegSucc ? <p className="succ">USUARIO REGISTRADO CORRECTAMENTE</p> : null}
         <div>
           <Link className="a" to='/Login'>¿Do you already have an account? Login</Link>
         </div>

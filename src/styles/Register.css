@@ -98,7 +98,22 @@ body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0px auto 0px;
     }
+
   .img {
     transform: translateX(55%) translateY(-135%);
     width: 370px;
+  }
+
+  .error {
+    color: rgb(110, 9, 9);
+    width: 35rem;
+    margin: 1rem auto 1rem;
+    font-family: 'sans-serif';
+  }
+
+  .succ {
+    color: rgb(41, 110, 9);
+    width: 35rem;
+    margin: 1rem auto 1rem;
+    font-family: 'sans-serif';
   }
